@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 # rob edit
+# second rob edit
 
 def vol_scaling(strategy_returns, volatility=0.10):
     portfolio_volatility = strategy_returns.rolling(window=12).std() * np.sqrt(4)
