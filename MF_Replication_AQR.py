@@ -8,7 +8,7 @@ def vol_scaling(strategy_returns, volatility=0.10):
     adjusted_together_strategy = strategy_returns * scaling_factor.fillna(1)
     return adjusted_together_strategy
 
-def test():
+def GARCH():
     return
 
 
