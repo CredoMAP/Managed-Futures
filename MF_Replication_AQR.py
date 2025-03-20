@@ -1,14 +1,12 @@
 import numpy as np
 import pandas as pd
 
+
 def vol_scaling(strategy_returns, volatility=0.10):
     portfolio_volatility = strategy_returns.rolling(window=12).std() * np.sqrt(4)
     scaling_factor = volatility / portfolio_volatility
     adjusted_together_strategy = strategy_returns * scaling_factor.fillna(1)
     return adjusted_together_strategy
-
-def GARCH():
-    return
 
 
 def price_trend(data, target_volatility=0.10):
